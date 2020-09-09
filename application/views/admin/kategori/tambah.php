@@ -7,40 +7,16 @@ echo form_open(base_url('admin/kategori/tambah'),' class="form-horizontal"');
 ?>
 
 <div class="form-group">
-  <label class="col-md-2 control-label">Nama pengguna</label>
+  <label class="col-md-2 control-label">Nama kategori</label>
   <div class="col-md-5">
-    <input type="text" name="nama" class="form-control" placeholder="Nama pengguna" value="<?php echo set_value('nama') ?>" required>
+    <input type="text" name="nama_kategori" class="form-control" placeholder="Nama kategori" value="<?php echo set_value('nama') ?>" required>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-2 control-label">Email</label>
+  <label class="col-md-2 control-label">Urutan</label>
   <div class="col-md-5">
-    <input type="email" name="email" class="form-control" placeholder="Email Pengguna" value="<?php echo set_value('email') ?>" required>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label">Kategori</label>
-  <div class="col-md-5">
-    <input type="text" name="kategori" class="form-control" placeholder="Kategori " value="<?php echo set_value('kategori') ?>" required>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label">Password</label>
-  <div class="col-md-5">
-    <input type="password" name="password" class="form-control" placeholder="Password" value="<?php echo set_value('password') ?>" required>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-2 control-label">Level Hak Akses</label>
-  <div class="col-md-5">
-    <select name="akses_level" class="form-control">
-    	<option value="Admin">Admin</option>
-    	<option value="Kategori ">Kategori </option>
-    </select>
+    <input type="number" name="urutan" class="form-control" placeholder="Urutan kategori" value="<?php echo set_value('urutan') ?>" required>
   </div>
 </div>
 

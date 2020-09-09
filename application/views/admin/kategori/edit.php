@@ -7,9 +7,9 @@ echo form_open(base_url('admin/kategori/edit/'.$kategori ->id_kategori ),' class
 ?>
 
 <div class="form-group">
-  <label class="col-md-2 control-label">Nama pengguna</label>
+  <label class="col-md-2 control-label">Nama kategori</label>
   <div class="col-md-5">
-    <input type="text" name="nama" class="form-control" placeholder="Nama pengguna" value="<?php echo $kategori ->nama ?>" required>
+    <input type="text" name="nama" class="form-control" placeholder="Nama kategori" value="<?php echo $kategori ->nama ?>" required>
   </div>
 </div>
 

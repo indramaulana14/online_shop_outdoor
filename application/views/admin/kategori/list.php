@@ -1,5 +1,5 @@
 <p>
-	<a href="<?php echo base_url('admin/kategori /tambah') ?>" class="btn btn-success btn-lg">
+	<a href="<?php echo base_url('admin/kategori/tambah') ?>" class="btn btn-success btn-lg">
 		<i class="fa fa-plus"></i> Tambah Baru
 	</a>
 </p>
@@ -31,9 +31,9 @@ if($this->session->flashdata('sukses')) {
 			<td><?php echo $kategori ->slug_kategori ?></td>
 			<td><?php echo $kategori ->urutan ?></td>
 			<td>
-				<a href="<?php echo base_url('admin/kategori/edit/'.$kategori ->id_kategori ) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Edit</a>
+				<a href="<?php echo base_url('admin/kategori/edit/'.$kategori->id_kategori) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Edit</a>
 
-				<a href="<?php echo base_url('admin/kategori/delete/'.$kategori ->id_kategori ) ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash-o"></i> Hapus</a>
+				<a href="<?php echo base_url('admin/kategori/delete/'.$kategori->id_kategori) ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash-o"></i> Hapus</a>
 			</td>
 		</tr>
 		<?php } ?>

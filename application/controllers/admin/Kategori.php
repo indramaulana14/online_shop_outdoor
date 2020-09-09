@@ -46,7 +46,7 @@ class Kategori extends CI_Controller {
 			$i 			   = $this->input;
 			$slug_kategori = url_title($this->input->post('nama_kategori'), 'dash', TRUE);
 
-			$data = array(	'slug_kategori' => $skug_kategori,
+			$data = array(	'slug_kategori' => $slug_kategori,
 							'nama_kategori'	=> $i->post('nama'),
 							'urutan'	=> $i->post('urutan'),
 						);
@@ -82,7 +82,7 @@ class Kategori extends CI_Controller {
 			$slug_kategori = url_title($this->input->post('nama_kategori'), 'dash', TRUE);
 
 			$data = array(	'id_kategori'	=> $id_kategori,
-							'slug_kategori' => $skug_kategori,
+							'slug_kategori' => $slug_kategori,
 							'nama_kategori'	=> $i->post('nama'),
 							'urutan'		=> $i->post('urutan'),
 						);
@@ -98,8 +98,8 @@ class Kategori extends CI_Controller {
 	{
 		$data = array('id_kategori' => $id_kategori);
 		$this->kategori_model->delete($data);
-			$this->session->set_flashdata('sukses', 'Data telah dihapus');
-			redirect(base_url('admin/kategori'),'refresh');
+		$this->session->set_flashdata('sukses', 'Data telah dihapus');
+		redirect(base_url('admin/kategori'),'refresh');
 	}
 }
 
