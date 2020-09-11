@@ -19,7 +19,7 @@ class Produk extends CI_Controller {
 		$produk = $this->produk_model->listing();
 
 		$data = array(	'title'		=> 'Data Produk',
-						'produk'		=> $produk,
+						'produk'	=> $produk,
 						'isi'		=> 'admin/produk/list'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -40,7 +40,6 @@ class Produk extends CI_Controller {
 		$valid->set_rules('kode_produk','Kode Produk','required|is_unique[produk.kode_produk]',
 			array( 'required'		=> '%s harus diisi',
 				   'is_unique'		=> '%s sudah ada. Buat kode produk baru'));
-
 
 		if($valid->run()) {
 			$config['upload_path']		= './asssets/uploads/image/';
@@ -119,7 +118,7 @@ class Produk extends CI_Controller {
 		//validasi input
 		$valid = $this->form_validation;
 
-		$valid->set_rules('nama','Nama lengkap','required',
+		$valid->set_rules('nama_produk','Nama Produk','required',
 			array( 'required'		=> '%s harus diisi'));
 
 		$valid->set_rules('email','Email','required|valid_email',
@@ -133,7 +132,7 @@ class Produk extends CI_Controller {
 		// End validasi
 
 		$data = array(	'title'		=> 'Edit Produk',
-						'produk'		=> $produk,
+						'produk'	=> $produk,
 						'isi'		=> 'admin/produk/edit'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -143,7 +142,7 @@ class Produk extends CI_Controller {
 			$data = array(	'id_produk'		=> $id_produk,
 							'nama'			=> $i->post('nama'),
 							'email'			=> $i->post('email'),
-							'produkname'		=> $i->post('produkname'),
+							'produkname'	=> $i->post('produkname'),
 							'password'		=> SHA1($i->post('password')),
 							'akses_level'	=> $i->post('akses_level'),
 						);
