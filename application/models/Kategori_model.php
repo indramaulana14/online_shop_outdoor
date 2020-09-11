@@ -52,15 +52,15 @@ class Kategori_model extends CI_Model {
 	// Edit
 	public function edit($data)
 	{
-		$this->db->where('id_kategori ', $data['id_kategori ']);
-		$this->db->update('kategori ',$data);
+		$this->db->where('id_kategori', $data['id_kategori']);
+		$this->db->update('kategori',$data);
 	}
 
 	// Delete
 	public function delete($data)
 	{
-		$this->db->where('id_kategori ', $data['id_kategori ']);
-		$this->db->delete('kategori ',$data);
+		$this->db->where('id_kategori', $data['id_kategori']);
+		$this->db->delete('kategori',$data);
 	}
 
 }

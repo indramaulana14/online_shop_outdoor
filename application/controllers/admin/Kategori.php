@@ -47,9 +47,9 @@ class Kategori extends CI_Controller {
 			$slug_kategori = url_title($this->input->post('nama_kategori'), 'dash', TRUE);
 
 			$data = array(	'slug_kategori' => $slug_kategori,
-							'nama_kategori'	=> $i->post('nama'),
-							'urutan'	=> $i->post('urutan'),
-						);
+							'nama_kategori'	=> $i->post('nama_kategori'),
+							'urutan'		=> $i->post('urutan'),
+					);
 			$this->kategori_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data telah ditambah');
 			redirect(base_url('admin/kategori'),'refresh');
@@ -72,7 +72,7 @@ class Kategori extends CI_Controller {
 		// End validasi
 
 		$data = array(	'title'		=> 'Edit Kategori Produk ',
-						'kategori'		=> $kategori,
+						'kategori'	=> $kategori,
 						'isi'		=> 'admin/kategori/edit'
 					);
 		$this->load->view('admin/layout/wrapper', $data, FALSE);
@@ -83,7 +83,7 @@ class Kategori extends CI_Controller {
 
 			$data = array(	'id_kategori'	=> $id_kategori,
 							'slug_kategori' => $slug_kategori,
-							'nama_kategori'	=> $i->post('nama'),
+							'nama_kategori'	=> $i->post('nama_kategori'),
 							'urutan'		=> $i->post('urutan'),
 						);
 			$this->kategori_model->edit($data);
