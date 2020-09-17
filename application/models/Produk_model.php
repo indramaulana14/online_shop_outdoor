@@ -13,15 +13,30 @@ class Produk_model extends CI_Model {
 	public function listing()
 	{
 		$this->db->select('produk.*,
-						users.nama,
 						kategori.nama_kategori,
 						kategori.slug_kategori');
 		$this->db->from('produk');
 		// JOIN
-		$this->db->join('users', 'users.id_user = produk.id_user', 'left');
 		$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
 		// END JOIN
 		$this->db->order_by('id_produk', 'desc');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	// listing all produk home
+	public function home()
+	{
+		$this->db->select('produk.*,
+						kategori.nama_kategori,
+						kategori.slug_kategori');
+		$this->db->from('produk');
+		// JOIN
+		$this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
+		// END JOIN
+		$this->db->where('produk.status_produk', 'publish');
+		$this->db->order_by('id_produk', 'desc');
+		$this->db->limit(12);
 		$query = $this->db->get();
 		return $query->result();
 	}

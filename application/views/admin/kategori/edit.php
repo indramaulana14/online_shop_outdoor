@@ -14,13 +14,6 @@ echo form_open(base_url('admin/kategori/edit/'.$kategori ->id_kategori ),' class
 </div>
 
 <div class="form-group">
-  <label class="col-md-2 control-label">Urutan</label>
-  <div class="col-md-5">
-    <input type="number" name="urutan" class="form-control" placeholder="Urutan" value="<?php echo $kategori ->urutan ?>" required>
-  </div>
-</div>
-
-<div class="form-group">
   <label class="col-md-2 control-label"></label>
   <div class="col-md-5">
     <button class="btn btn-success btn-lg" name="submit" type="submit">

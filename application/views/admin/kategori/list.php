@@ -19,7 +19,6 @@ if($this->session->flashdata('sukses')) {
 			<th>No</th>
 			<th>NAMA</th>
 			<th>SLUG</th>
-			<th>URUTAN</th>
 			<th>ACTION</th>
 		</tr>
 	</thead>
@@ -29,7 +28,6 @@ if($this->session->flashdata('sukses')) {
 			<td><?php echo $no ?></td>
 			<td><?php echo $kategori ->nama_kategori ?></td>
 			<td><?php echo $kategori ->slug_kategori ?></td>
-			<td><?php echo $kategori ->urutan ?></td>
 			<td>
 				<a href="<?php echo base_url('admin/kategori/edit/'.$kategori->id_kategori) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Edit</a>
 

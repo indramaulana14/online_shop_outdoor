@@ -26,7 +26,7 @@ if($this->session->flashdata('sukses')) {
 		</tr>
 	</thead>
 	<tbody>
-		<?PHP $no=1; foreach($produk as $produk) { ?> 
+		<?php $no=1; foreach($produk as $produk) { ?> 
 		<tr>
 			<td><?php echo $no ?></td>
 			<td>
@@ -39,7 +39,7 @@ if($this->session->flashdata('sukses')) {
 			<td>
 				<a href="<?php echo base_url('admin/produk/edit/'.$produk->id_produk) ?>" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i> Edit</a>
 
-				<a href="<?php echo base_url('admin/produk/delete/'.$produk->id_produk) ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin ingin menghapus data ini?')"><i class="fa fa-trash-o"></i> Hapus</a>
+				<?php include('delete.php') ?>
 			</td>
 		</tr>
 		<?php $no++; } ?>

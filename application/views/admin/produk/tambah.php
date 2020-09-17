@@ -16,7 +16,7 @@ echo form_open_multipart(base_url('admin/produk/tambah'),' class="form-horizonta
 <div class="form-group form-group-lg">
   <label class="col-md-2 control-label">Nama Produk</label>
   <div class="col-md-8">
-    <input type="text" name="nama_produk" class="form-control" placeholder="Nama Produk" value="<?php echo set_value('nama') ?>" required>
+    <input type="text" name="nama_produk" class="form-control" placeholder="Nama Produk" value="<?php echo set_value('nama_produk') ?>" required>
   </div>
 </div>
 
@@ -76,9 +76,9 @@ echo form_open_multipart(base_url('admin/produk/tambah'),' class="form-horizonta
 </div>
 
 <div class="form-group">
-  <label class="col-md-2 control-label">Keyword</label>
+  <label class="col-md-2 control-label">Keyword (untuk SEO Google)</label>
   <div class="col-md-10">
-    <textarea name="keywords" class="form-control" placeholder="Keyword"><?php echo set_value('keywords') ?></textarea>
+    <textarea name="keywords" class="form-control" placeholder="Keyword (untuk SEO Google)"><?php echo set_value('keywords') ?></textarea>
   </div>
 </div>
 

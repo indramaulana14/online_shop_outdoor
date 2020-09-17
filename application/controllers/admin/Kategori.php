@@ -48,7 +48,6 @@ class Kategori extends CI_Controller {
 
 			$data = array(	'slug_kategori' => $slug_kategori,
 							'nama_kategori'	=> $i->post('nama_kategori'),
-							'urutan'		=> $i->post('urutan'),
 					);
 			$this->kategori_model->tambah($data);
 			$this->session->set_flashdata('sukses', 'Data telah ditambah');
@@ -84,7 +83,6 @@ class Kategori extends CI_Controller {
 			$data = array(	'id_kategori'	=> $id_kategori,
 							'slug_kategori' => $slug_kategori,
 							'nama_kategori'	=> $i->post('nama_kategori'),
-							'urutan'		=> $i->post('urutan'),
 						);
 			$this->kategori_model->edit($data);
 			$this->session->set_flashdata('sukses', 'Data telah diedit');
